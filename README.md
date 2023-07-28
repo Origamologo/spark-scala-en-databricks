@@ -1,4 +1,4 @@
-# **spark-scala-en-databricks**
+# **Spark + Scala en databricks**
 Apuntes de scala con spark en databriks
 <br>
 
