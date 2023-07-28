@@ -165,6 +165,7 @@ A cada lección le corersponde un archivo con ejercicios que encontrarás en cad
 
 8. **Optimización automática de las consultas**
 
-       7-7. Catalyst Optimizer
-           * Plan Lógico
+        7-7. Catalyst Optimizer
+            * Plan Lógico
+   
            * Plan Físico
