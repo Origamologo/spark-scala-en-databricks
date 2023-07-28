@@ -95,78 +95,76 @@ A cada lección le corersponde un archivo con ejercicios que encontrarás en cad
 
 **Persistencia de DFs**
 
-      5-12. persist, cache, unpersist
+       5-12. persist, cache, unpersist
    
 #
 #### :open_file_folder: ***6_spark_SQL_avanzado.ipynb***
-1. **Agregaciones**
+**Agregaciones**
 
-   1-1. **Funciones count, countDistinct y aprox_count_distinct**\
-   1-2. **Funciones min y max**\
-   1-3. **Funciones sum, sum_distinct y avg**\
-   1-4. **Agregación con agrupación**\
-   1-5. **Varias agregaciones por grupo**\
-   1-6. **Agregación con pivote**
+       6-1. **Funciones count, countDistinct y aprox_count_distinct**\
+       6-2. **Funciones min y max**\
+       6-3. **Funciones sum, sum_distinct y avg**\
+       6-4. **Agregación con agrupación**\
+       6-5. **Varias agregaciones por grupo**\
+       6-6. **Agregación con pivote**
 
-2. **Joins**
+**Joins**
    
-   2-1. **Inner Join**\
-   2-2. **Left Outer Join**\
-   2-3. **Right Outer Join**\
-   2-4. **Full Outer Join**\
-   2-5. **Left Anti Join**\
-   2-6. **Left Semi Join**\
-   2-7. **Cross Join**
+       6-7. **Inner Join**\
+       6-8. **Left Outer Join**\
+       6-9. **Right Outer Join**\
+       6-10. **Full Outer Join**\
+       6-11. **Left Anti Join**\
+       6-12. **Left Semi Join**\
+       6-13. **Cross Join**
 
-3. **Manejo de nombres de columnas duplicados**
+**Manejo de nombres de columnas duplicados**
+
+       6-14. **Nombres de columna duplicados**
    
-4. **Shuffle Hash Join y Broadcast Hash Join**
+**Shuffle Hash Join y Broadcast Hash Join**
+
+       6-15. **Qué son y cómo forzar el broadcast**
 
 #
 #### :open_file_folder: ***7_funciones_sparkSQL.ipynb***
-1. **Funciones de fecha y hora**
+**Funciones de fecha y hora**
 
-   1-1. **Convertir de string a fecha y darle formato**
-   * to_date, to_timestamp, date_format
-     
-   1-2. **Cálculos de fecha y hora**
-   * datediff, months_between, last_day
-     
-   1-3. **Extraer valores específicos de una columna date**
-   * year, month, dayofmonth, dayofyear, hour, minute, second
+       7-1. **Convertir de string a fecha y darle formato, calcular fechas y extraer valores**
+           * to_date, to_timestamp, date_format
+           * datediff, months_between, last_day
+           * year, month, dayofmonth, dayofyear, hour, minute, second
 
-2. **Funciones para trabajar con strings**
+**Funciones para trabajar con strings**
    
-   2-1. **Transformación de un string**
-   * ltrim, rtrim, trim
-   * lpad, rpad
-   * concat_ws, lower, upper, initcap, reverse
-  
-   2-2. **Aplicación de expresiones regulares**
-   * regexp_replace
+       7-2. **Transformación de un string y aplicación de regex**
+           * ltrim, rtrim, trim
+           * lpad, rpad
+           * concat_ws, lower, upper, initcap, reverse
+           * regexp_replace
 
-3. **Funciones para trabajar con colecciones**
+**Funciones para trabajar con colecciones**
    
-   3-1. **Trabajar con arrays**
-   * size, sort_array, array_contains, explode
+       7-3. **Trabajar con arrays y con json**
+           * size, sort_array, array_contains, explode
+           * from_json, to_json, getItem()
 
-   3-2. **Trabajar con json**
+**Funciones para evaluar condiciones y para sustituir nulos**
 
-4. **Funciones when, coalesce y lit**
-5. **Funciones definidas por el usuario (UDF)**
+       7-4. Funciones when + otherwise y coalesce + lit
    
-   5-1. **Registrar el UDF con la función register()**\
-   5-2. **Crear el UDF con la funcion udf()**\
-   5-3. **Notación @udf**\
-   5-4. **Pandas UDF**
+**Definir y aplicar funciones (UDF)**
+   
+       7-5. User Defined Functions (UDF)
 
-6. **Funciones de ventana**
+**Aplicar operaciones a grupos**
 
-   6-1. **row_number**\
-   6-2. **rank**\
-   6-3. **dense_rank**\
-   6-4. **Agregaciones con especificaciones de ventana**
+       7-6. Funciones de ventana
+           * row_number, rank, dense_rank
+           * Agregaciones con especificaciones de ventana
 
-7. **Catalyst Optimizer**
-   * Plan Lógico
-   * Plan Físico
+8. **Optimización automática de las consultas**
+
+       7-7. Catalyst Optimizer
+           * Plan Lógico
+           * Plan Físico
