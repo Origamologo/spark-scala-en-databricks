@@ -1,0 +1,30 @@
+Un cluster de databricks es un conjunto de herramientas que nos permiten realizar tareas de data desde un notebook.
+Para crear un cluster hacemos clic en compute. Elegimos el runtime (en este caso el 10.4), añadimos config si queremos y clic en Crear Cluster. 
+Regulamos los workers y la memoria según necesitemos; el driver usa la memoria para organizar las tareas y se las pasa a los workers. Podemos ponerle autoescalado para que vaya aumentando o reduciendo recurso según necesite.
+
+Después hay que crear un notebook; pedirá el lenguaje que vamos a usar y el cluster.
+También podemos crear nobooks y carpetas que los contengan en Wokspace, esto parece mejor opción. También podemos importar un notebook.
+Para subir datos vamos a Data y clic en Create table. Una vez elegida la fuente de datos y cargados los datos, podemos elegir Create Table in Notebook y se nos abrirá un notebook con un montón de opciones.
+Otra opción es cargar los datos desde un notebook que creemos nosotoros, clic en File => Upload data. Copiamos el path donde esté la data y la caragamos en el notebook con
+
+val df = spark.read.csv("</path/to/file>")
+display(df)
+
+
+SPARK SESSION
+Es un punto de entrada unificado a todas las funciones de spark.
+Para cargar la sesión basta con ejecutar el comando
+
+spark
+
+Y luego importamos la sesión de spark y creamos una variable donde quede guardada  con
+
+import org.apache.spark.sql.SparkSession
+val <nombre_variable> = SparkSession.builder.appName("<nombre_app>").getOrCreate()
+
+Para consultar la configuración de la sesión
+
+<nombre_variable>.conf.getAll.foreach(println)
+
+
+7
